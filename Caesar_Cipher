@@ -1,0 +1,17 @@
+void caesar_cipher(char* text,int sh) 
+{
+	int i;
+    for(i=0;text[i]!='\0';++i) 
+	{
+        char character=text[i];
+        if(character>='A' && character<='Z') 
+		{
+            text[i]=(character-'A'+sh)%26+'A';// Upper Case//
+        } 
+		else if(character>='a' && character<='z') 
+		{
+            text[i]=(character-'a'+sh)%26+'a';// Lower Case//
+        }
+    }
+}// Encryption //
+
